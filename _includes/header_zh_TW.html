@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% if page.title %}{{ page.title }} : {% endif %}Node-RED</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+	<link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<script src="/jquery/js/jquery-1.9.1.js"></script>
+	<link href="/css/simplegrid.css?d=20200825" rel="stylesheet" media="screen">
+	<link href="/css/style.css?d=20200825" rel="stylesheet" media="screen">
+	<link href="/css/front.css?d=20200825" rel="stylesheet" media="screen">
+	<link href="/css/docs.css?d=20200825" rel="stylesheet" media="screen">
+	<link href="/css/blog.css?d=20200825" rel="stylesheet" media="screen">
+	<link href="/css/syntax.css?d=20211008" rel="stylesheet" media="screen">
+	<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" />
+	{% if page.layout == 'blog' %}<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@nodered" />
+	<meta name="twitter:title" content="{{ page.title | xml_escape }}" />
+	{% if page.image %}
+	<meta name="twitter:image" content="{{ site.github.url }}{{ page.image }}" />
+	<meta property="og:image" content="{{ site.github.url }}{{ page.image }}" />
+	{% else %}
+	<meta name="twitter:image" content="https://nodered.org/node-red-icon.png" />
+	<meta property="og:image" content="https://nodered.org/node-red-icon.png" />
+    {% endif %}
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ site.github.url }}{{ page.url }}" />
+	<meta property="og:title" content="{{ page.title | xml_escape }}" />
+	{% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+	<meta property="og:description" content="{{ page.description }}" />
+	{% else %}
+	<meta name="twitter:description" content="在部落格上了解更多" />
+	<meta property="og:description" content="在部落格上了解更多" />
+    {% endif %}
+
+
+	{% endif %}
+</head>
+<body>
+<!-- <div class="banner">
+	<a href="" class="banner-content">
+		📆 <strong>最後機會！</strong> 加入 1,500 多名創客與專業人士，參加為期一整天的 Node-RED 演講 · 從興趣到生產 · 免費 &raquo;
+	</a>
+</div> -->
+<div class="header">
+    <div class="header-content">
+        <div class="brand"><a href="/index_zh_TW.html">Node-RED</a></div>
+        <ul class="navigation">
+            <li {% if page.url == "/index_zh_TW.html" or page.url == "/" %}class="current"{% endif %}><a href="/index_zh_TW.html">首頁</a></li>
+            <li {% if page.url contains '/about/' %}class="current"{% endif %}><a href="/about/index_zh_TW.html">關於</a></li>
+            <li {% if page.url contains '/blog/' %}class="current"{% endif %}><a href="/blog/index_zh_TW.html">部落格</a></li>
+            <li {% if page.url contains '/docs/' %}class="current"{% endif %}><a href="/docs/index_zh_TW.html">說明文件</a></li>
+            <li><a href="https://discourse.nodered.org/">論壇</a></li>
+            <li><a href="https://flows.nodered.org/">流程</a></li>
+            <li><a href="https://github.com/node-red">GitHub</a></li>
+        </ul>
+        <a href="#" class="menu"><i class="fa fa-reorder fa-2x"></i></a>
+    </div>
+</div>

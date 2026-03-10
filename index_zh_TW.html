@@ -1,0 +1,170 @@
+---
+layout: barebones
+title: 用於事件驅動應用程式的低代碼編程
+---
+<div class="title">
+    <div class="grid">
+        <div class="col-1-2">
+            <h1>用於事件驅動應用程式的低代碼編程</h1>
+            <h2>收集、轉換和視覺化即時數據的最簡單方法。</h2>
+            <p>最新版本：<a href="https://www.npmjs.com/package/node-red"><span class="node-red-latest-version">v4.1.7</span> (npm)</a></p>
+            <p><a class="box-link" href="#get-started">開始使用</a></p>
+        </div>
+        <div class="col-1-2 title-hero">
+            <iframe  style="margin: 50px 0; border-radius: 10px; overflow: hidden; box-shadow: 10px 10px 30px #0005;" width="445" height="250" src="https://www.youtube.com/embed/ksGeUD26Mw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<!-- Grid 1/2 -->
+<div class="intro">
+    <div class="grid">
+        <div class="col-1-2">
+            <div class="content feature"><img src="images/nr-image-1.png" /></div>
+        </div>
+        <div class="col-1-2">
+            <div class="content blurb">
+                <p>Node-RED 的目標是讓任何人都能建立收集、轉換和視覺化數據的應用程式；建立可以自動化其世界的流程（Flow）。其低代碼的特性使其適用於任何背景的使用者，無論是用於家庭自動化、工業控制系統或兩者之間的任何應用。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="features">
+    <div class="grid">
+        <div class="col-1-2">
+            <div class="content blurb">
+                <p>從家庭愛好者到大規模工業運作，Node-RED 已在廣泛的應用中佔有一席之地，並由活躍的社群提供支持，該社群已建立超過 <a href="https://flows.nodered.org" _target="blank">5,000 個節點（Nodes）和流程（Flows）</a>，幫助您快速開始。</p>
+            </div>
+        </div>
+        <div class="col-1-2">
+            <div class="content feature"><img src="images/nr-image-2.png" /></div>
+        </div>
+    </div>
+</div>
+<div class="platforms" id="get-started">
+    <div class="content">
+        <div class="grid">
+            <div class="col-1-12">&nbsp;</div>
+            <div class="col-10-12">
+                <h3>開始使用</h3>
+                <p>Node-RED 基於 Node.js 構建，充分利用其事件驅動、非阻塞模型。這使其非常適合在 Raspberry Pi 等低成本硬體上的網路邊緣運行，也可以在雲端運行。</p>
+            </div>
+            <div class="col-1-12"></div>
+        </div>
+        <div class="grid">
+            <div class="col-1-3 ">
+                <img src="images/platform-local.png">
+                <h4>在本機運行</h4>
+                <ul>
+                    <li><a href="/docs/getting-started/index_zh_TW.html">開始使用</a></li>
+                    <li><a href="/docs/platforms/docker_zh_TW.html">Docker</a></li>
+                </ul>
+            </div>
+            <div class="col-1-3 ">
+                <img src="images/platform-device.png">
+                <h4>在設備上運行</h4>
+                <ul>
+                    <li><a href="/docs/hardware/raspberrypi_zh_TW.html">Raspberry Pi</a></li>
+                    <li><a href="https://flowfuse.com/docs/device-agent/introduction/">FlowFuse 設備代理程式 (Device Agent)</a></li>
+                    <li><a href="/docs/hardware/beagleboneblack_zh_TW.html">BeagleBone Black</a></li>
+                    <li><a href="/docs/hardware/arduino_zh_TW.html">與 Arduino 互動</a></li>
+                    <li><a href="/docs/platforms/android_zh_TW.html">Android</a></li>
+                </ul>
+            </div>
+            <div class="col-1-3 ">
+                <img src="images/platform-cloud.png">
+                <h4>在雲端運行</h4>
+                <ul>
+                    <li><a href="https://flowfuse.com">FlowFuse</a></li>
+                    <li><a href="/docs/platforms/aws_zh_TW.html">Amazon Web Services</a></li>
+                    <li><a href="/docs/platforms/azure_zh_TW.html">Microsoft Azure</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contributors-list">
+    <div class="grid">
+        <div class="content">
+        <h3>團隊介紹</h3>
+        {% for group in site.data.contributors %}
+        <h3>{{ group.name }}</h3>
+        {% if group.header %}<span class="contributor-group-description">{{group.header}}</span>{% endif %}
+        <ul class="contributors">
+        {% for member in group.people %}
+        <li class="contributor-card">
+            <img src="https://avatars.githubusercontent.com/u/{{ member.githubId}}?v=4&s=192" class="contributor-icon"/>
+            <span class="contributor-info">
+                <span class="contributor-name">{{ member.name }}</span>
+                <span>
+                    {% if member.links.home %}<a href="{{ member.links.home }}" target="_blank"><i class="fa fa-globe"></i></a>{% endif %}
+                    {% if member.links.github %}<a href="{{ member.links.github }}" target="_blank"><i class="fa fa-github"></i></a>{% endif %}
+                </span>
+            </span>
+        </li>
+        {% endfor %}
+        </ul>
+        {% if group.footer %}<span class="contributor-group-description">{{group.footer}}</span>{% endif %}
+        {% endfor %}
+        <h3>致謝</h3>
+        <p>Node-RED 項目目前由以下機構贊助：</p>
+        <a style="margin-left: 20px;" href="https://flowfuse.com"><img width="200px" src="users/ff-logo--wordmark--light.svg" /></a>
+        <p>過去的贊助商：</p>
+        <ul>
+            <li>IBM</li>
+            <li>Hitachi</li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+<div class="users" id="users">
+    <div class="grid">
+        <div class="content">
+            <h3>誰在進入 Node-RED？</h3>
+            {% for category in site.data.users %}
+            <ul id="user-list">
+                {% for user in category.users %}
+                <li><a href="{{ user.url }}" target="_blank"><img src="users/{{ user.logo }}"/></a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+            <p style="text-align:center;"><a href="/about/community/index_zh_TW.html">想在這裡展示嗎？請告訴我們！</a></p>
+            <p style="text-align:center; font-size: 0.6em; max-width: 420px; line-height: 1.2em; margin: auto; ">所有使用的標誌均經授權。這些連結不構成 Node-RED 項目對所列公司的任何產品、服務或意見的認可或批准。</p>
+        </div>
+    </div>
+</div>
+
+<div class="community content" id="community">
+        <div class="grid">
+            <div class="col-1-2">
+                <div class="social">
+                    <h3>社群 <a class="box-link" href="/about/community/index_zh_TW.html">更多</a></h3>
+                    <ul>
+                        <li><a class="box-link" href="https://discourse.nodered.org"><i class="fa fa-commenting-o fa-3x"></i><br/>論壇</a></li>
+                        <li><a class="box-link" href="/slack_zh_TW.html"><i class="fa fa-slack fa-3x"></i><br/>Slack 團隊</a></li>
+                        <li><a class="box-link" href="https://stackoverflow.com/questions/tagged/node-red"><i class="fa fa-stack-overflow fa-3x"></i><br/>Stack Overflow</a></li>
+                        <li><a class="box-link" href="https://github.com/node-red"><i class="fa fa-github fa-3x"></i><br/>GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-2">
+                <div class="blog">
+                    <h3>部落格文章 <a class="box-link" href="/blog/index_zh_TW.html">更多</a></h3>
+                    <ul>
+                    {% for post in site.posts limit:5 %}<li><a class="box-link" href="{{ post.url }}">{{ post.title }}<span class="date">{{ post.date | date_to_string }}</span></a></li>{% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+<script>
+    $(function() {
+        var list = $("#user-list");
+        var items = list.children();
+        items.sort(function() {
+            return 0.5 - Math.random();
+        });
+        list.empty();
+        items.appendTo(list);
+    })
+</script>

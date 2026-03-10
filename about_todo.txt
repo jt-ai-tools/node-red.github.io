@@ -1,0 +1,8 @@
+about/community/index
+about/community/slack/index
+about/community/survey/2023/index
+about/community/survey/2019/index
+about/community/survey/index
+about/license/index
+about/releases/index
+about/governance/index

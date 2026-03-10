@@ -1,0 +1,19 @@
+<ul class="toc">
+    <li class="toc-expander"><i class="fa fa-caret-down"></i></li>
+    <li class="tocheader">
+        <ul>
+            <li class="{% if page.url == "/docs/api/context/index_zh_TW.html" %} active{% endif %}"><a href="/docs/api/context/index_zh_TW.html">上下文儲存區 API</a>
+            <li {% if page.url contains "/docs/api/context/methods" %}class="active"{% endif %}><a href="/docs/api/context/methods/index_zh_TW.html">方法</a>
+            <li {% if page.url contains "/docs/api/context/store/memory" %}class="active"{% endif %}><a href="/docs/api/context/store/memory/index_zh_TW.html">記憶體儲存區</a>
+            <li {% if page.url contains "/docs/api/context/store/localfilesystem" %}class="active"{% endif %}><a href="/docs/api/context/store/localfilesystem/index_zh_TW.html">檔案儲存區</a>
+        </ul>
+    </li>
+</ul>
+<script>
+    $(function() {
+        var pageToc = $("<ul></ul>").appendTo(".toc li.active:not(.toctitle)");
+        $(".docs-content h3,.docs-content h4").each(function() {
+            $('<li id="toc-item-'+$(this).attr('id')+'"><a style="font-size: 0.9em; padding-left: 60px;" href="#'+$(this).attr('id')+'">'+$(this).text()+'</a></li>').appendTo(pageToc)
+        })
+    })
+</script>
